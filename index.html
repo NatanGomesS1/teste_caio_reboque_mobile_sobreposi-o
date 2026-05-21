@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Caio Auto Socorro - Reboque e Guincho 24h | Campos dos Goytacazes</title>
+    <meta name="description" content="Reboque e guincho 24 horas em Campos dos Goytacazes. Frota própria, atendimento rápido e preço justo. Transporte interestadual para RJ, SP, MG e ES. Ligue agora!">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7fc;
+            color: #1e2a3e;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 5%;
+            padding-right: 0;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0a5c8e 0%, #0a4a72 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(10, 92, 142, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.03);
+            background: linear-gradient(135deg, #0e6ea8 0%, #0c5a88 100%);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.03);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #eef2f7 0%, #ffffff 100%);
+            padding: 0;
+            border-bottom: 1px solid #dce5ef;
+            overflow: hidden;
+            position: relative;
+            isolation: isolate;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -120px;
+            right: -120px;
+            width: 320px;
+            height: 320px;
+            background: rgba(10,92,142,0.06);
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: -1;
+        }
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            text-align: left;
+            padding: 40px 0;
+            padding-right: 40px;
+        }
+
+        .hero-badge {
+            background: rgba(10, 92, 142, 0.1);
+            border-left: 4px solid #0a5c8e;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0a5c8e;
+        }
+
+        .hero-content h1 {
+            font-size: 3.4rem;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            color: #0a2a3b;
+        }
+
+        .hero-content h1 span {
+            color: #0a5c8e;
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0a5c8e;
+            margin-bottom: 0.8rem;
+            border-left: 3px solid #0a5c8e;
+            padding-left: 1rem;
+        }
+
+        .hero-description {
+            color: #2c3e50;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .trust-badge {
+            background: #ffffff;
+            border: 1px solid #cbdde9;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1e2a3e;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .trust-badge i {
+            color: #0a5c8e;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            min-height: 500px;
+            clip-path: polygon(2% 0, 100% 0, 100% 100%, 12% 100%);
+            overflow: hidden;
+        }
+        .hero-image img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 68% center;
+            transform: scale(1.18);
+            opacity: 0.92;
+            z-index: 0;
+            display: block;
+        }
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.22);
+            z-index: 1;
+        }
+
+        /* Seções padrão */
+        .section-light {
+            background: #ffffff;
+        }
+        .section-gray {
+            background: #f8fafc;
+        }
+        .section-blue-light {
+            background: #eef2f7;
+        }
+
+        section {
+            padding: 42px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            color: #0a2a3b;
+        }
+        .section-title span {
+            color: #0a5c8e;
+        }
+
+        /* CARDS DE SERVIÇO */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid #e0e8f0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #0a5c8e;
+            box-shadow: 0 15px 30px -12px rgba(10, 92, 142, 0.2);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background: #d9e6f2;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #0a5c8e;
+        }
+
+        .service-card p {
+            color: #2c3e50;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .service-card.highlight {
+            border: 2px solid #0a5c8e;
+            background: #f9fdfe;
+        }
+
+        .diferencial-badge {
+            display: inline-block;
+            background: #0a5c8e;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            align-self: flex-start;
+        }
+
+        /* Depoimentos */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem;
+            border: 1px solid #e0e8f0;
+            transition: 0.2s;
+        }
+        .testimonial-card:hover {
+            border-color: #0a5c8e;
+        }
+        .testimonial-card i.fa-quote-left {
+            color: #0a5c8e;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+        .testimonial-card p {
+            color: #2c3e50;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+        .client-name {
+            font-weight: 700;
+            color: #0a2a3b;
+        }
+        .client-stars {
+            color: #f5b042;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* Diferenciais */
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        .diferencial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem;
+            text-align: center;
+            border-bottom: 3px solid #0a5c8e;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .diferencial-card .emoji {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+        .diferencial-card h3 {
+            color: #0a5c8e;
+            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+        }
+        .diferencial-card p {
+            color: #3a546d;
+            font-size: 0.85rem;
+        }
+
+        /* Transporte interestadual */
+        .interestadual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .interestadual-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #0a2a3b;
+        }
+        .rotas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .rota-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 16px;
+            border-left: 4px solid #0a5c8e;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        /* CTA contraste */
+        .cta-contraste {
+            background: linear-gradient(135deg, #0a5c8e 0%, #0a4a72 100%);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 32px;
+            margin: 0 5%;
+            color: white;
+        }
+        .cta-contraste h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+        .cta-contraste .btn {
+            background: white;
+            color: #0a5c8e;
+            margin-top: 1.2rem;
+        }
+        .cta-contraste .btn:hover {
+            background: #f0f4f8;
+        }
+
+        /* Áreas que atendemos */
+        .areas-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .areas-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem;
+            border: 1px solid #e0e8f0;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .areas-card:hover {
+            border-color: #0a5c8e;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .areas-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #0a5c8e;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-bottom: 2px solid #eef2f7;
+            padding-bottom: 0.6rem;
+        }
+        .split-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .area-list {
+            list-style: none;
+        }
+        .area-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #2c3e50;
+            margin-bottom: 0.4rem;
+        }
+        .area-list li i {
+            color: #0a5c8e;
+            font-size: 0.7rem;
+            width: 16px;
+        }
+        .estados-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+        .estado-badge {
+            background: #eef2f7;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #0a5c8e;
+            font-size: 0.8rem;
+        }
+        .map-container {
+            flex: 1;
+            width: 100%;
+            min-height: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e0e8f0;
+            margin-top: 0.5rem;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: white;
+            margin-bottom: 0.8rem;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e0e8f0;
+        }
+        .faq-question {
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #0a2a3b;
+        }
+        .faq-question i {
+            color: #0a5c8e;
+            transition: 0.2s;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+            color: #3a546d;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 150px;
+            padding: 0 1.5rem 1.2rem 1.5rem;
+        }
+
+        /* WhatsApp flutuante - visível apenas em desktop */
+        .whatsapp-float {
+            position: fixed;
+            right: 24px;
+            bottom: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+        .whatsapp-float i {
+            font-size: 1.6rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #1e2a3e;
+            color: #bcd0df;
+            padding: 2.5rem 5% 1.5rem;
+            border-top: 1px solid #2c3e50;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-brand h3 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .footer-links a, .footer-links p {
+            display: block;
+            color: #bcd0df;
+            text-decoration: none;
+            margin-bottom: 0.6rem;
+            font-size: 0.85rem;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #2c3e50;
+            font-size: 0.75rem;
+        }
+
+        /* Mobile bottom bar */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 10px;
+            background: white;
+            z-index: 999;
+            border-top: 1px solid #dce5ef;
+        }
+        .bottom-btn {
+            padding: 12px;
+            text-align: center;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* ========== RESPONSIVIDADE COM IMAGEM DE FUNDO NO MOBILE ========== */
+        @media (max-width: 1000px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .areas-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            
+            /* Em mobile: imagem vira fundo do hero, e o bloco .hero-image desaparece */
+            .hero {
+                background-image: url('reboque_pesado_campos_dos_goytacazes_caio_auto_socorro.jpeg');
+                background-size: cover;
+                background-position: 68% center;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+            .hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5); /* overlay escuro para contraste do texto */
+                z-index: 1;
+            }
+            .hero .container {
+                position: relative;
+                z-index: 2;
+            }
+            .hero-image {
+                display: none; /* esconde a imagem separada */
+            }
+            .hero-content {
+                text-align: center;
+                padding: 40px 0;
+                padding-right: 0;
+                color: white;
+            }
+            .hero-content h1,
+            .hero-content h1 span,
+            .hero-subtitle,
+            .hero-description {
+                color: white;
+            }
+            .hero-badge {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border-left-color: white;
+            }
+            .trust-badge {
+                background: rgba(255,255,255,0.15);
+                border-color: rgba(255,255,255,0.3);
+                color: white;
+            }
+            .trust-badge i {
+                color: white;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .interestadual-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .split-columns {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 32px 0;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-badge {
+                font-size: 0.7rem;
+            }
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+            .hero-description {
+                font-size: 0.85rem;
+            }
+            .btn {
+                padding: 10px 18px;
+                font-size: 0.85rem;
+            }
+            .trust-badge {
+                font-size: 0.65rem;
+                padding: 4px 10px;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            .service-card p {
+                font-size: 0.85rem;
+            }
+            .cta-contraste {
+                padding: 2rem 1rem;
+                margin: 0 2%;
+            }
+            .cta-contraste h2 {
+                font-size: 1.4rem;
+            }
+            .areas-card h3 {
+                font-size: 1.1rem;
+            }
+            .area-list li {
+                font-size: 0.8rem;
+            }
+            .estado-badge {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .whatsapp-float {
+                display: none;
+            }
+            .bottom-bar {
+                display: grid;
+            }
+            body {
+                padding-bottom: 70px;
+            }
+            .hero-content {
+                padding: 30px 0;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-buttons .btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- WhatsApp flutuante DIREITA (visível apenas em desktop) -->
+<a href="https://wa.me/5522999999999?text=Olá%20Caio%20Auto%20Socorro,%20preciso%20de%20um%20reboque%20urgente!" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i> <span>Atendimento 24h</span>
+</a>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">🚛 PAROU NA ESTRADA? LIGOU. CHEGAMOS.</div>
+            <h1>Caio Auto Socorro <span>Reboque & Guincho</span></h1>
+            <div class="hero-subtitle">Frota própria, nova e especializada em reboque pesado</div>
+            <p class="hero-description">Atendimento emergencial, transporte interestadual e emissão de NF-e. Atendimento rápido e seguro em toda região Norte Fluminense.</p>
+            <div class="hero-buttons">
+                <a href="tel:5522999999999" class="btn btn-primary"><i class="fas fa-phone-alt"></i> (22) 99999-9999 - LIGAR AGORA</a>
+                <a href="https://wa.me/5522999999999" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+            </div>
+            <div class="trust-badges">
+                <span class="trust-badge"><i class="fas fa-check-circle"></i> Nota Fiscal</span>
+                <span class="trust-badge"><i class="fas fa-credit-card"></i> PIX / Cartão</span>
+                <span class="trust-badge"><i class="fas fa-truck"></i> Frota Própria</span>
+                <span class="trust-badge"><i class="fas fa-clock"></i> 24h/7dias</span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="reboque_pesado_campos_dos_goytacazes_caio_auto_socorro.jpeg" alt="Caio Auto Socorro" fetchpriority="high" onerror="this.src='https://placehold.co/500x400/0a5c8e/white?text=Caio+Auto+Socorro'">
+        </div>
+    </div>
+</section>
+
+<!-- SERVIÇOS (restante do código idêntico ao seu) -->
+<section class="section-light" id="servicos">
+    <div class="container">
+        <div class="section-title">Nossos <span>Serviços</span></div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img class="service-img" src="reboque_pesado_campos_dos_goytacazes_caio_guincho.jpeg" alt="Reboque Pesado">
+                <div class="service-content"><h3>Reboque Pesado e Leve</h3><p>Equipamentos robustos para movimentação, destombamento e transporte de carretas, caminhões carregados e maquinários pesados.</p></div>
+            </div>
+            <div class="service-card">
+                <img class="service-img" src="reboque_plataforma_veicular-campos_dos_goytacazes.jpeg" alt="Plataforma Veicular">
+                <div class="service-content"><h3>Plataforma Veicular</h3><p>Plataformas novas para transporte seguro de automóveis, utilitários, vans e picapes sem avarias na lataria ou assoalho.</p></div>
+            </div>
+            <div class="service-card highlight">
+                <img class="service-img" src="reboque_simultaneo_frota_propria_campos_dos_goytacazes.jpeg" alt="Frota Própria">
+                <div class="service-content">
+                    <span class="diferencial-badge">⭐ DIFERENCIAL</span>
+                    <h3>Reboque com Frota Própria</h3>
+                    <p>Atendimento urbano — dois veículos simultâneos. Quando você liga, vem o nosso caminhão — com nosso motorista treinado.<br><br>✅ Nenhuma terceirização. Controle total.<br>✅ Equipados para transportar mais de um veículo.<br>✅ Frota revisada regularmente.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img class="service-img" src="reboque_pracha_para_carros_campos_especiais.jpeg" alt="Motos">
+                <div class="service-content"><h3>Motos e Especiais</h3><p>Cintas emborrachadas e travas específicas para motocicletas e veículos especiais, sem comprometer estrutura ou carenagem.</p></div>
+            </div>
+            <div class="service-card">
+                <img class="service-img" src="reboque_interestadual_caio_auto_socorro_campos_dos_goytacazes.jpeg" alt="Interestadual">
+                <div class="service-content"><h3>Transporte Interestadual</h3><p>Rotas programadas para RJ, SP, MG e ES com cobertura jurídica, monitoramento em tempo real e emissão de NF-e.</p></div>
+            </div>
+            <div class="service-card">
+                <img class="service-img" src="reboque_emergencia_campos_dos_goytacazes.jpeg" alt="Emergencial">
+                <div class="service-content"><h3>Socorro Emergencial</h3><p>Unidades posicionadas em rodovias para menor tempo de resposta — inclusive madrugadas, domingos e feriados.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA 1 -->
+<div class="container" style="padding: 0 5%; margin-bottom: 60px; margin-top: -20px;">
+    <div class="cta-contraste">
+        <h2>🚨 Precisa de um guincho agora mesmo?</h2>
+        <p>Atendimento 24 horas - Equipe a caminho em minutos</p>
+        <a href="tel:5522999999999" class="btn"><i class="fas fa-phone-alt"></i> LIGUE AGORA</a>
+    </div>
+</div>
+
+<!-- PROVA SOCIAL -->
+<section class="section-gray">
+    <div class="container">
+        <div class="section-title">O que dizem nossos <span>clientes</span> ⭐</div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Atendimento sensacional! Chegaram em 15 minutos na BR-101 com meu caminhão carregado. Profissionais capacitados e preço justo."</p><div class="client-name">— Roberto Almeida</div><div class="client-stars">★★★★★</div></div>
+            <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Usei o serviço para transportar meu carro de Campos para o Rio. Muito ágeis, caminhão novo e motorista educado. Nota fiscal na hora."</p><div class="client-name">— Fernanda Lima</div><div class="client-stars">★★★★★</div></div>
+            <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Melhor reboque de Campos. Frota própria faz toda diferença, sempre o mesmo motorista de confiança."</p><div class="client-name">— Carlos Mendonça</div><div class="client-stars">★★★★★</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="section-blue-light">
+    <div class="container">
+        <div class="section-title">Por que <span>contratar a Caio?</span></div>
+        <div class="diferenciais-grid">
+            <div class="diferencial-card"><span class="emoji">⚡</span><h3>Atendimento Ultrarrápido</h3><p>Chegamos em média em 20 minutos em qualquer ponto de Campos.</p></div>
+            <div class="diferencial-card"><span class="emoji">💰</span><h3>Preço Transparente</h3><p>Orçamento sem surpresas. Pague o combinado.</p></div>
+            <div class="diferencial-card"><span class="emoji">🛠️</span><h3>Frota Própria</h3><p>Caminhões 0km e motoristas treinados. Nada terceirizado.</p></div>
+            <div class="diferencial-card"><span class="emoji">📋</span><h3>Nota Fiscal na Hora</h3><p>Emitimos NF para reembolso de seguradoras.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- TRANSPORTE INTERESTADUAL -->
+<section class="section-light">
+    <div class="container">
+        <div class="interestadual-grid">
+            <div class="interestadual-text">
+                <h2>Transporte <span style="color:#0a5c8e">Interestadual</span></h2>
+                <p>Levamos seu veículo com segurança para qualquer destino do Brasil. Rotas fixas semanais com monitoramento e seguro incluso.</p>
+                <div style="margin-top:1rem"><span style="background:#eef2f7; padding:6px 12px; border-radius:20px;">✅ Seguro incluso</span> <span style="background:#eef2f7; padding:6px 12px; border-radius:20px;">✅ Rastreamento</span></div>
+            </div>
+            <div class="rotas">
+                <div class="rota-item"><strong>📍 Rio de Janeiro</strong><br>Capital e Região Metropolitana</div>
+                <div class="rota-item"><strong>📍 São Paulo</strong><br>Capital, Interior e Litoral</div>
+                <div class="rota-item"><strong>📍 Minas Gerais</strong><br>Belo Horizonte e Zona da Mata</div>
+                <div class="rota-item"><strong>📍 Espírito Santo</strong><br>Vitória e Serra</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA 2 -->
+<div class="container" style="padding: 0 5%; margin-bottom: 60px;">
+    <div class="cta-contraste">
+        <h2>🚨 Precisa de um guincho agora mesmo?</h2>
+        <p>Atendimento 24 horas - Equipe a caminho em minutos</p>
+        <a href="tel:5522999999999" class="btn"><i class="fas fa-phone-alt"></i> LIGUE AGORA</a>
+    </div>
+</div>
+
+<!-- ÁREAS QUE ATENDEMOS -->
+<section class="section-gray">
+    <div class="container">
+        <div class="section-title">📍 Áreas que <span>Atendemos</span></div>
+        <div class="areas-wrapper">
+            <div class="areas-card">
+                <h3><i class="fas fa-map-marked-alt"></i> Região de Atuação</h3>
+                <div class="split-columns">
+                    <div>
+                        <strong style="color:#0a5c8e;"><i class="fas fa-city"></i> Norte Fluminense:</strong>
+                        <ul class="area-list" style="margin-top: 8px;">
+                            <li><i class="fas fa-map-marker-alt"></i> Campos dos Goytacazes</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Macaé</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Rio das Ostras</li>
+                            <li><i class="fas fa-map-marker-alt"></i> São João da Barra</li>
+                            <li><i class="fas fa-map-marker-alt"></i> São Fidélis</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Quissamã</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Carapebus</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Conceição de Macabu</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Cardoso Moreira</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Italva</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong style="color:#0a5c8e;"><i class="fas fa-truck"></i> Estados Atendidos:</strong>
+                        <div class="estados-list" style="margin-top: 8px;">
+                            <span class="estado-badge"><i class="fas fa-flag"></i> Rio de Janeiro</span>
+                            <span class="estado-badge"><i class="fas fa-flag"></i> São Paulo</span>
+                            <span class="estado-badge"><i class="fas fa-flag"></i> Minas Gerais</span>
+                            <span class="estado-badge"><i class="fas fa-flag"></i> Espírito Santo</span>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.85rem; color: #3a546d;"><i class="fas fa-check-circle"></i> Transporte interestadual com seguro, rastreamento e emissão de NF-e.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="areas-card">
+                <h3><i class="fas fa-map"></i> Nossa Base</h3>
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=Campos%20dos%20Goytacazes,%20RJ&t=&z=12&ie=UTF8&iwloc=&output=embed" title="Mapa Campos dos Goytacazes" loading="lazy"></iframe>
+                </div>
+                <p><i class="fas fa-location-dot"></i> Atendemos em toda a região a partir da nossa base central.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-light">
+    <div class="container">
+        <div class="section-title">Perguntas <span>Frequentes</span></div>
+        <div class="faq-container">
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)"><span>⏱️ Qual o tempo médio de espera?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Nosso tempo médio de resposta em Campos é de 15 a 25 minutos. Atendimento 24h.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)"><span>🧾 Vocês emitem nota fiscal para seguradoras?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sim! Nota fiscal eletrônica completa para reembolso.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)"><span>🏗️ Atendem veículos pesados?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sim, frota especializada para caminhões, máquinas pesadas e agrícolas.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)"><span>🌍 Quais cidades?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Campos, Macaé, Rio das Ostras, São Fidélis, São João da Barra e toda região Norte Fluminense.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)"><span>🏢 Terceirizam o serviço?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Não! Frota 100% própria, motoristas treinados pela Caio Auto Socorro.</div></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand"><h3>CAIO AUTO SOCORRO</h3><p>Reboque e guincho 24h com frota própria, atendimento rápido e preço justo.</p></div>
+        <div class="footer-links"><h4>Contato</h4><a href="tel:5522999999999"><i class="fas fa-phone"></i> (22) 99999-9999</a><a href="https://wa.me/5522999999999"><i class="fab fa-whatsapp"></i> WhatsApp 24h</a><p><i class="fas fa-map-marker-alt"></i> Campos dos Goytacazes - RJ</p></div>
+        <div class="footer-links"><h4>Horário</h4><p>🚛 24 horas por dia</p><p>📅 7 dias por semana</p><p>🔄 Incluindo feriados</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Caio Auto Socorro. Todos os direitos reservados. | Frota Própria - Nada Terceirizado</p></div>
+</footer>
+
+<div class="bottom-bar">
+    <a href="tel:5522999999999" class="bottom-btn" style="background: #0a5c8e; color:white;">📞 LIGAR</a>
+    <a href="https://wa.me/5522999999999" class="bottom-btn" style="background: #25D366; color:white;">📱 WHATSAPP</a>
+</div>
+
+<script>
+    function toggleFAQ(element) {
+        const item = element.closest('.faq-item');
+        const active = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!active) item.classList.add('active');
+    }
+    document.querySelector('.faq-item')?.classList.add('active');
+</script>
+</body>
+</html>
