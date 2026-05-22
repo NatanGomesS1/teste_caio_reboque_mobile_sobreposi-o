@@ -232,7 +232,7 @@
             color: #0a5c8e;
         }
 
-        /* CARDS DE SERVIÇO - corrigidos para mobile */
+        /* CARDS DE SERVIÇO */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -615,7 +615,7 @@
             text-decoration: none;
         }
 
-        /* Responsividade - CORREÇÕES PARA MOBILE */
+        /* ========== RESPONSIVIDADE COM IMAGEM DE FUNDO E TEXTO LEGÍVEL ========== */
         @media (max-width: 1000px) {
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -630,42 +630,65 @@
                 padding-left: 5%;
                 padding-right: 5%;
             }
+            
+            .hero {
+                background-image: url('reboque_pesado_campos_dos_goytacazes_caio_auto_socorro.jpeg');
+                background-size: cover;
+                background-position: 68% center;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+            /* Overlay mais escuro para contraste do texto */
+            .hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.65);
+                z-index: 1;
+            }
             .hero .container {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
+                position: relative;
+                z-index: 2;
+            }
+            .hero-image {
+                display: none;
             }
             .hero-content {
                 text-align: center;
-                padding: 30px 0;
+                padding: 40px 0;
                 padding-right: 0;
+                color: white;
+                text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            }
+            .hero-content h1,
+            .hero-content h1 span,
+            .hero-subtitle,
+            .hero-description {
+                color: white;
             }
             .hero-badge {
-                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border-left-color: white;
+                text-shadow: none;
             }
-            .hero-buttons, .trust-badges {
+            .trust-badge {
+                background: rgba(255,255,255,0.2);
+                border-color: rgba(255,255,255,0.4);
+                color: white;
+                text-shadow: none;
+            }
+            .trust-badge i {
+                color: white;
+            }
+            .hero-buttons {
                 justify-content: center;
             }
             .interestadual-grid {
                 grid-template-columns: 1fr;
-            }
-            .hero-image {
-                width: 100%;
-                max-width: 100%;
-                margin: 0 auto;
-                clip-path: none;
-                min-height: auto;
-                border-radius: 24px;
-                overflow: hidden;
-            }
-            .hero-image img {
-                position: relative;
-                transform: none;
-                height: auto;
-                object-position: center;
-            }
-            .hero-image::before {
-                display: none;
             }
         }
 
@@ -728,16 +751,16 @@
 
         @media (max-width: 600px) {
             .whatsapp-float {
-                display: none;  /* Remove o WhatsApp flutuante no celular */
+                display: none;
             }
             .bottom-bar {
-                display: grid;    /* Mostra a barra inferior mobile */
+                display: grid;
             }
             body {
                 padding-bottom: 70px;
             }
             .hero-content {
-                padding: 20px 0;
+                padding: 30px 0;
             }
             .hero-content h1 {
                 font-size: 1.8rem;
@@ -784,22 +807,19 @@
     </div>
 </section>
 
-<!-- SERVIÇOS -->
+<!-- SERVIÇOS (mantido igual) -->
 <section class="section-light" id="servicos">
     <div class="container">
         <div class="section-title">Nossos <span>Serviços</span></div>
         <div class="services-grid">
-            <!-- Card 1 -->
             <div class="service-card">
                 <img class="service-img" src="reboque_pesado_campos_dos_goytacazes_caio_guincho.jpeg" alt="Reboque Pesado">
                 <div class="service-content"><h3>Reboque Pesado e Leve</h3><p>Equipamentos robustos para movimentação, destombamento e transporte de carretas, caminhões carregados e maquinários pesados.</p></div>
             </div>
-            <!-- Card 2 -->
             <div class="service-card">
                 <img class="service-img" src="reboque_plataforma_veicular-campos_dos_goytacazes.jpeg" alt="Plataforma Veicular">
                 <div class="service-content"><h3>Plataforma Veicular</h3><p>Plataformas novas para transporte seguro de automóveis, utilitários, vans e picapes sem avarias na lataria ou assoalho.</p></div>
             </div>
-            <!-- Card 3 (Diferencial) -->
             <div class="service-card highlight">
                 <img class="service-img" src="reboque_simultaneo_frota_propria_campos_dos_goytacazes.jpeg" alt="Frota Própria">
                 <div class="service-content">
@@ -808,17 +828,14 @@
                     <p>Atendimento urbano — dois veículos simultâneos. Quando você liga, vem o nosso caminhão — com nosso motorista treinado.<br><br>✅ Nenhuma terceirização. Controle total.<br>✅ Equipados para transportar mais de um veículo.<br>✅ Frota revisada regularmente.</p>
                 </div>
             </div>
-            <!-- Card 4 -->
             <div class="service-card">
                 <img class="service-img" src="reboque_pracha_para_carros_campos_especiais.jpeg" alt="Motos">
                 <div class="service-content"><h3>Motos e Especiais</h3><p>Cintas emborrachadas e travas específicas para motocicletas e veículos especiais, sem comprometer estrutura ou carenagem.</p></div>
             </div>
-            <!-- Card 5 -->
             <div class="service-card">
                 <img class="service-img" src="reboque_interestadual_caio_auto_socorro_campos_dos_goytacazes.jpeg" alt="Interestadual">
                 <div class="service-content"><h3>Transporte Interestadual</h3><p>Rotas programadas para RJ, SP, MG e ES com cobertura jurídica, monitoramento em tempo real e emissão de NF-e.</p></div>
             </div>
-            <!-- Card 6 -->
             <div class="service-card">
                 <img class="service-img" src="reboque_emergencia_campos_dos_goytacazes.jpeg" alt="Emergencial">
                 <div class="service-content"><h3>Socorro Emergencial</h3><p>Unidades posicionadas em rodovias para menor tempo de resposta — inclusive madrugadas, domingos e feriados.</p></div>
@@ -827,7 +844,7 @@
     </div>
 </section>
 
-<!-- CTA após serviços -->
+<!-- CTA 1 -->
 <div class="container" style="padding: 0 5%; margin-bottom: 60px; margin-top: -20px;">
     <div class="cta-contraste">
         <h2>🚨 Precisa de um guincho agora mesmo?</h2>
@@ -880,7 +897,7 @@
     </div>
 </section>
 
-<!-- CTA final -->
+<!-- CTA 2 -->
 <div class="container" style="padding: 0 5%; margin-bottom: 60px;">
     <div class="cta-contraste">
         <h2>🚨 Precisa de um guincho agora mesmo?</h2>
